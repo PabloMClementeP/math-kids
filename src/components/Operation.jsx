@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import randomNumber from '../helpers/random-value'
 
-const Operation = ({ selectedOp, setResult }) => {
+const Operation = ({ selectedOp, setResult, setClicked, clicked }) => {
 
     const [numbers, setNumbers] = useState({
         num1: 0,
@@ -11,6 +11,10 @@ const Operation = ({ selectedOp, setResult }) => {
     useEffect(()=>{
         getRandomNumber();
     },[selectedOp]);
+
+    useEffect (()=>{
+        getRandomNumber();
+    },[clicked]);
 
     useEffect(()=>{
         let result;

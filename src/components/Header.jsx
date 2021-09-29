@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import Score from './Score'
 
-const Header = ({ setSelectedOp }) => {
+const Header = ({ setSelectedOp, score, hits }) => {
 
     const [operator, setOperator] = useState();
 
@@ -15,6 +15,7 @@ const Header = ({ setSelectedOp }) => {
     },[operator]);
 
     return (
+
         <div className="header">
             <div className="selection-operator">
                 <h2>Select operation: </h2>
@@ -23,8 +24,11 @@ const Header = ({ setSelectedOp }) => {
                 <button className="operator" value="x" onClick={onClickOperator}>x</button>
                 <button className="operator" value="%" onClick={onClickOperator}>%</button>
             </div>
-            <Score />
+            <Score 
+                score={score}
+                />
         </div>
+
     )
 }
 

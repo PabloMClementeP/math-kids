@@ -68,6 +68,10 @@ p{
     border: none;
 }
 
+.operator:hover{
+    cursor: pointer;
+}
+
 .score-container{
     height: 100px;
     width: 250px;

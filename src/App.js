@@ -15,17 +15,23 @@ function App() {
 
   return (
     <div className="container">
+        {/* Header componente contiene los botones de eleccion de operador
+            muestra el score y las vidas restantes  */}
         <Header 
           setSelectedOp={setSelectedOp}
           score={score}
+          lives={lives}
         />
         <div className="main">
+          {/* Componente Operation contiene los numeros para la operacion 
+              y el simbolo de la operacion */}
           <Operation 
             selectedOp={selectedOp}
             setResult={setResult}
             setClicked={setClicked}
             clicked={clicked}
           />
+          {/* Componente Result contiene los 3 numeros donde se debe elegir el correcto */}
           <Result 
             setScore={setScore}
             setClicked={setClicked}
@@ -33,7 +39,8 @@ function App() {
             result={result}
             score={score}
             clicked={clicked}
-            lives={lives}          />
+            lives={lives}          
+          />
         </div>
         <Tips />
     </div>

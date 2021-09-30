@@ -9,23 +9,36 @@ const Result = ({setScore, setClicked, setLives, result, score, clicked, lives }
 
     // when the result change, get another random values
     useEffect(()=>{
-        let value1 = randomNumber(0,99);
-        let value3 = randomNumber(0,99);
-        setValues(shuffleArray([value1,result,value3]));
+        // checking the values are not equal to result or less to 0
+        let value1 = -1;
+        while (value1 < 0 || value1 === result ){
+            value1 = randomNumber((result - 10),(result+10));
+        } 
+
+        let value2 = -1;
+        while (value2 < 0 || value2 === result || value2 === value1 ){
+            value2 = randomNumber((result - 10),(result+10));
+        }       
+        // Shuffle array
+        setValues(shuffleArray([value1,value2,result]));
     },[result]);
 
     // Check if clicked the right value
     const checkingResult = e =>{
         e.preventDefault();
+        // ** si el valor elegido es igual al resultado correcto sumo 10 puntos al score
+        //    si no es el correcto resto uno a las vidas
+        //    si la cantidad de vidas es menor a 0 fin del juego (reset - Vidas - Score - Cantidad de clicks)
         if(parseInt(e.target.value) === result){
             setScore(score+10);
         }else{
             if(lives > 0){
                 setLives(lives-1);  
             }else{
-                alert("Game Over!!");
+                alert(`Game Over!! - You Score: ${score}`);
                 setClicked(0);
                 setLives(3);
+                setScore(0);
             }
         }
         setClicked(clicked + 1); 

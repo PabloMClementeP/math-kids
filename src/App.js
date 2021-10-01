@@ -48,7 +48,7 @@ function App() {
           />
         </Col>
         
-        <Col xs={24} md ={4} className="glass result-container">
+        <Col className="glass result-container">
           {/* Result contain the 3 numbers where  the correct one must be chosen */}
           <Result 
             setScore={setScore}

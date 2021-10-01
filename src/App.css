@@ -136,6 +136,7 @@ p{
 
 
 .result-container{
+    width: 100%;
     margin-top: 15px;
 }
 
@@ -163,3 +164,97 @@ p{
     cursor: pointer;
 }
 
+
+
+/* 
+*********************************************************************
+                Media queries
+********************************************************************* 
+*/
+
+
+@media (min-width: 768px) {
+    .selection h2{
+        font-size: 2.5rem;
+        color: #000;
+        margin: 0;
+    }
+    
+    .op-button{
+        font-size: 2rem;
+    }
+    
+    .score h4{
+        font-size: 2rem;
+    }
+
+    .score p{
+        font-size: 3rem;
+        font-weight: bold;
+    }
+
+    .operation-buttons{
+        height: 160px;
+    }
+    
+    .operation-buttons p{
+        width: 130px;
+        height: 130px;
+        font-size: 6.2rem;
+        font-weight: bold;
+        border-radius: 22px;
+    }
+
+    .result-container{
+        margin-top: 30px;
+    }
+    
+    
+    
+    .result-buttons{
+        justify-content: space-evenly;
+    }
+    
+    .result-buttons button{
+        width: 120px;
+        height: 120px;
+        font-size: 4rem;
+        border-radius: 60px;
+    }
+}
+
+
+@media (min-width: 992px) {
+    .score h4{
+        margin-top: 10px !important;
+    }
+
+    .lives{
+        font-size: 2rem;
+        font-weight: bold;
+    }
+    
+    .hearts{
+        font-size: 3rem !important;
+        margin: 0 20px;
+    }
+    
+    .losed-heart{
+        font-size: 3rem !important;
+        margin: 0 20px;
+    }
+  
+    .result-buttons{
+        flex-direction: row;
+    }
+}
+
+
+@media (min-width: 1200px) {
+
+    .op-button{
+        width: 70px;
+        height: 70px;
+        font-size: 2.8rem;
+    }
+}

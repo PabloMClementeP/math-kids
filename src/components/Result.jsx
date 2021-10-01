@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react'
 import randomNumber from '../helpers/random-value'
 
 
-const Result = ({setScore, setClicked, setLives, result, score, clicked, lives }) => {
+const Result = ({setScore, setClicked, setLives, resetLives, result, score, clicked, lives }) => {
     
     // useState array of values to show in the result panel 
     const [values, setValues] = useState([0,0,0]);
@@ -26,9 +26,11 @@ const Result = ({setScore, setClicked, setLives, result, score, clicked, lives }
     // Check if clicked the right value
     const checkingResult = e =>{
         e.preventDefault();
-        // ** si el valor elegido es igual al resultado correcto sumo 10 puntos al score
-        //    si no es el correcto resto uno a las vidas
-        //    si la cantidad de vidas es menor a 0 fin del juego (reset - Vidas - Score - Cantidad de clicks)
+
+        // If the chosen value is equal to the correct result, I add 10 points to the score
+        // if it's not the correct one, rest one to the lives
+        // if the number of lives is less than 0 end of the game (reset - Lives - Score - Number of clicks)
+
         if(parseInt(e.target.value) === result){
             setScore(score+10);
         }else{
@@ -37,12 +39,11 @@ const Result = ({setScore, setClicked, setLives, result, score, clicked, lives }
             }else{
                 alert(`Game Over!! - You Score: ${score}`);
                 setClicked(0);
-                setLives(3);
+                resetLives();
                 setScore(0);
             }
         }
         setClicked(clicked + 1); 
-        console.log(lives)
     }
 
     // Shufle the array order
@@ -51,21 +52,16 @@ const Result = ({setScore, setClicked, setLives, result, score, clicked, lives }
     }
 
     return (
-        <div className="result-container">
-            <div className="result-buttons">
-                <button 
-                    value={values[0]}
-                    onClick={checkingResult}
-                >{values[0]}</button>
-                <button 
-                    value={values[1]}
-                    onClick={checkingResult}
-                >{values[1]}</button>
-                <button 
-                    value={values[2]}
-                    onClick={checkingResult}
-                >{values[2]}</button>
-            </div>
+        <div className="result-buttons">
+            { values.map((val =>{
+                return (
+                    <button
+                        key={Math.random(val)}
+                        value={val}
+                        onClick={checkingResult}
+                    >{val}</button>
+                )
+            }))}
         </div>
     )
 }

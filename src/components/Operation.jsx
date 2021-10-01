@@ -34,7 +34,7 @@ const Operation = ({ selectedOp, setResult, clicked }) => {
                 result = numbers.num1 * numbers.num2;
                 break;
             case '%':
-                // necesito buscar numeros multiplos del primer valor
+
                 if(multiplo(numbers.num1, numbers.num2)){
                     result = numbers.num1 / numbers.num2;
                 }else{
@@ -63,7 +63,7 @@ const Operation = ({ selectedOp, setResult, clicked }) => {
 
     const multiplo = (v1, v2)=>{
         let remainder = v1 % v2;
-        if (remainder == 0){
+        if (remainder === 0){
             return true;
         }else{
             return false;
@@ -71,19 +71,17 @@ const Operation = ({ selectedOp, setResult, clicked }) => {
     }
 
     return (
-        <div className="operation-container">
-            <div className="operation-buttons">
-                <p>
-                    { selectedOp ?`${numbers.num1}` : ``}
-                </p>
-                <p>
-                    { selectedOp ?`${selectedOp}` : ``}
-                </p>
-                <p>
-                    { selectedOp ?`${numbers.num2}` : ``}
-                </p>
-            </div>
-        </div>
+        <>
+            <p>
+                { selectedOp ?`${numbers.num1}` : ``}
+            </p>
+            <p>
+                { selectedOp ?`${selectedOp}` : ``}
+            </p>
+            <p>
+                { selectedOp ?`${numbers.num2}` : ``}
+            </p>
+        </>
     )
 }
 

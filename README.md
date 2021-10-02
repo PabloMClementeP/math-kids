@@ -19,6 +19,18 @@ In this application kids can practice math in a fun way
 * scoring system
 * three lives (game over alert)
 
-## Contact
+## First stage of interface design
+###Mobile
+
+![firstMobile-UIdesign](https://user-images.githubusercontent.com/52505789/135696957-c886b525-d8e4-4820-86e7-11a023502356.jpg)
+
+###Desktop
+![firstDesktop-UIdesign](https://user-images.githubusercontent.com/52505789/135696983-d2461b3b-eef4-4865-82bc-3d269904e68d.jpg)
+
+* Responsive design
+* Lives represented by icon
+* Glassmorphism interface
+
+## Idea, design and programming
 Pablo Clemente - pclementep@gmail.com
 

@@ -3,9 +3,13 @@ import './App.css';
 import Header from './components/Header';
 import Operation from './components/Operation';
 import Result from './components/Result';
+
 // import Tips from './components/Tips';
 import 'antd/dist/antd.css';
 import { Row, Col } from 'antd';
+
+import audioError from "./assets/sounds/error-sound.mp3";
+import audioCorrect from "./assets/sounds/correct-sound.mp3";
 
 function App() {
 
@@ -19,6 +23,15 @@ function App() {
 
   const resetLives = () =>{
     setLives(Lives);
+  }
+
+  const playError = ()=>{
+    new Audio(audioError).play();
+  }
+
+
+  const playCorrect = ()=>{
+    new Audio(audioCorrect).play();
   }
 
   return (
@@ -55,6 +68,8 @@ function App() {
             setClicked={setClicked}
             setLives={setLives}
             resetLives={resetLives}
+            playCorrect={playCorrect}
+            playError={playError}
             result={result}
             score={score}
             clicked={clicked}

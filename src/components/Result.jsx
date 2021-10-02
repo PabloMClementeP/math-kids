@@ -1,8 +1,11 @@
 import React, { useEffect, useState } from 'react'
 import randomNumber from '../helpers/random-value'
 
+import 'antd/dist/antd.css';
+import { message } from 'antd';
 
-const Result = ({setScore, setClicked, setLives, resetLives, result, score, clicked, lives }) => {
+
+const Result = ({setScore, setClicked, setLives, resetLives, playCorrect, playError, result, score, clicked, lives }) => {
     
     // useState array of values to show in the result panel 
     const [values, setValues] = useState([0,0,0]);
@@ -33,9 +36,13 @@ const Result = ({setScore, setClicked, setLives, resetLives, result, score, clic
 
         if(parseInt(e.target.value) === result){
             setScore(score+10);
+            playCorrect();
+            message.success('Great!!!'); 
         }else{
             if(lives > 0){
-                setLives(lives-1);  
+                setLives(lives-1);
+                playError();
+                message.warning('Wrong answer :('); 
             }else{
                 alert(`Game Over!! - You Score: ${score}`);
                 setClicked(0);

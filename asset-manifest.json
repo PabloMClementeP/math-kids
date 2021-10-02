@@ -1,17 +1,17 @@
 {
   "files": {
     "main.css": "/math-kids/static/css/main.306f0057.chunk.css",
-    "main.js": "/math-kids/static/js/main.7b8e0ce6.chunk.js",
-    "main.js.map": "/math-kids/static/js/main.7b8e0ce6.chunk.js.map",
+    "main.js": "/math-kids/static/js/main.22f171fc.chunk.js",
+    "main.js.map": "/math-kids/static/js/main.22f171fc.chunk.js.map",
     "runtime-main.js": "/math-kids/static/js/runtime-main.f0d260f6.js",
     "runtime-main.js.map": "/math-kids/static/js/runtime-main.f0d260f6.js.map",
     "static/css/2.786ae0dd.chunk.css": "/math-kids/static/css/2.786ae0dd.chunk.css",
-    "static/js/2.11541f7a.chunk.js": "/math-kids/static/js/2.11541f7a.chunk.js",
-    "static/js/2.11541f7a.chunk.js.map": "/math-kids/static/js/2.11541f7a.chunk.js.map",
+    "static/js/2.9f821288.chunk.js": "/math-kids/static/js/2.9f821288.chunk.js",
+    "static/js/2.9f821288.chunk.js.map": "/math-kids/static/js/2.9f821288.chunk.js.map",
     "index.html": "/math-kids/index.html",
     "static/css/2.786ae0dd.chunk.css.map": "/math-kids/static/css/2.786ae0dd.chunk.css.map",
     "static/css/main.306f0057.chunk.css.map": "/math-kids/static/css/main.306f0057.chunk.css.map",
-    "static/js/2.11541f7a.chunk.js.LICENSE.txt": "/math-kids/static/js/2.11541f7a.chunk.js.LICENSE.txt",
+    "static/js/2.9f821288.chunk.js.LICENSE.txt": "/math-kids/static/js/2.9f821288.chunk.js.LICENSE.txt",
     "static/media/App.css": "/math-kids/static/media/background-1.09ee658e.jpg",
     "static/media/correct-sound.9cf3f5ce.mp3": "/math-kids/static/media/correct-sound.9cf3f5ce.mp3",
     "static/media/error-sound.7c938615.mp3": "/math-kids/static/media/error-sound.7c938615.mp3"
@@ -19,8 +19,8 @@
   "entrypoints": [
     "static/js/runtime-main.f0d260f6.js",
     "static/css/2.786ae0dd.chunk.css",
-    "static/js/2.11541f7a.chunk.js",
+    "static/js/2.9f821288.chunk.js",
     "static/css/main.306f0057.chunk.css",
-    "static/js/main.7b8e0ce6.chunk.js"
+    "static/js/main.22f171fc.chunk.js"
   ]
 }
